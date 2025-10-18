@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { supabase } from '@/lib/supabaseClient'
 
 const categories = ref<any[]>([])
 
 async function getCategories() {
-  const { data } = await supabase.from('categories').select()
+  const response = await fetch('/.netlify/functions/api/categories')
+  const data = await response.json()
   categories.value = data || []
 }
 

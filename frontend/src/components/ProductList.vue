@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { supabase } from '@/lib/supabaseClient'
 import ProductCard from './ProductCard.vue'
 
 const products = ref<any[]>([])
 
 async function getProducts() {
-  const { data } = await supabase.from('products').select()
+  const response = await fetch('/.netlify/functions/api/products')
+  const data = await response.json()
   products.value = data || []
 }
 
