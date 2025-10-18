@@ -8,7 +8,7 @@ async function checkout() {
     return
   }
 
-  const { error } = await stripe.value.redirectToCheckout({
+  const { error } = await (stripe.value as any).redirectToCheckout({
     lineItems: [{ price: 'YOUR_PRICE_ID', quantity: 1 }],
     mode: 'payment',
     successUrl: `${window.location.origin}/success`,

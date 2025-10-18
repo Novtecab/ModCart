@@ -1,12 +1,12 @@
+@import './base.css';
+
+@import "tw-animate-css";
+
 @tailwind base;
 
 @plugin "tailwindcss-animate";
 @tailwind components;
 @tailwind utilities;
-
-@import './base.css';
-
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
