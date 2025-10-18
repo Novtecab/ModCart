@@ -1,6 +1,6 @@
 @import './base.css';
 
-@import "tw-animate-css";
+@import "tailwindcss-animate";
 
 @tailwind base;
 
