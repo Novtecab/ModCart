@@ -18,7 +18,7 @@ onMounted(() => {
   <div class="category-list">
     <ul class="space-y-2">
       <li v-for="category in categories" :key="category.id">
-        <RouterLink :to="`/category/${category.name}`" class="block p-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200">
+        <RouterLink :to="`/category/${category.name}`" class="block p-2 rounded-md text-text hover:bg-secondary hover:text-primary transition-colors duration-200 font-medium">
           {{ category.name }}
         </RouterLink>
       </li>

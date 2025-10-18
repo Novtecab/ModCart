@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --color-background: #f8f8f8; /* Light background */
-  --color-text: #333333; /* Dark text */
-  --color-primary: #a3b18a; /* A shade of green/earth tone */
-  --color-secondary: #dad7cd; /* Lighter earth tone */
-  --color-accent: #588157; /* Darker green accent */
-  --color-border: #e0e0e0; /* Light border */
+  /* Define a more professional color palette */
+  --color-background: #ffffff; /* White */
+  --color-text: #333333; /* Dark Gray */
+  --color-primary: #005f60; /* Deep Teal */
+  --color-secondary: #e0e0e0; /* Light Gray */
+  --color-accent: #ff6b6b; /* Coral Red */
+  --color-border: #cccccc; /* Medium Gray */
 
   --section-gap: 160px;
 }
@@ -14,11 +14,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #333333; /* Dark background */
-    --color-text: #f8f8f8; /* Light text */
-    --color-primary: #588157;
-    --color-secondary: #3a5a40;
-    --color-accent: #a3b18a;
-    --color-border: #555555;
+    --color-text: #ffffff; /* Light text */
+    --color-primary: #4ecdc4; /* Lighter Teal */
+    --color-secondary: #555555; /* Darker Gray */
+    --color-accent: #ff6b6b; /* Coral Red */
+    --color-border: #666666; /* Darker Gray Border */
   }
 }
 
@@ -38,8 +38,7 @@ body {
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
-  font-family: 'Lora', serif; /* Example serif font for headings */
-  font-family: 'Open Sans', sans-serif; /* Example sans-serif font for body */
+  font-family: var(--font-sans); /* Use Tailwind's sans font */
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
