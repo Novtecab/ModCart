@@ -4,85 +4,45 @@ import CategoryList from '@/components/CategoryList.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <!-- Navigation links will go here -->
-      </nav>
-    </div>
-  </header>
+  <div class="flex flex-col min-h-screen font-sans text-gray-800 bg-gray-50">
+    <!-- Header -->
+    <header class="w-full py-4 bg-white shadow-md">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <RouterLink to="/" class="text-2xl font-bold text-gray-900">ModCart</RouterLink>
+        <nav>
+          <ul class="flex space-x-4">
+            <li><RouterLink to="/" class="text-gray-600 hover:text-gray-900">Home</RouterLink></li>
+            <li><RouterLink to="/about" class="text-gray-600 hover:text-gray-900">About</RouterLink></li>
+            <!-- Add more navigation links as needed -->
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <aside>
-    <CategoryList />
-  </aside>
+    <!-- Main Content Area -->
+    <main class="container mx-auto flex-grow px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Sidebar for Categories -->
+        <aside class="md:col-span-1 bg-white p-6 rounded-lg shadow-sm">
+          <h2 class="text-xl font-semibold mb-4">Categories</h2>
+          <CategoryList />
+        </aside>
 
-  <RouterView />
+        <!-- Main Router View -->
+        <section class="md:col-span-3">
+          <RouterView />
+        </section>
+      </div>
+    </main>
 
-  <footer>
-    <!-- Footer content will go here -->
-  </footer>
+    <!-- Footer -->
+    <footer class="w-full py-6 bg-gray-800 text-white text-center">
+      <div class="container mx-auto px-4">
+        <p>&copy; 2025 ModCart. All rights reserved.</p>
+        <!-- Add more footer content or links here -->
+      </div>
+    </footer>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>

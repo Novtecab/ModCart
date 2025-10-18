@@ -16,15 +16,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="product-list">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <ProductCard v-for="product in products" :key="product.id" :product="product" />
   </div>
 </template>
 
 <style scoped>
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-}
+/* No scoped styles needed as Tailwind CSS classes are used directly in the template */
 </style>

@@ -16,17 +16,16 @@ onMounted(() => {
 
 <template>
   <div class="category-list">
-    <h3>Categories</h3>
-    <ul>
+    <ul class="space-y-2">
       <li v-for="category in categories" :key="category.id">
-        {{ category.name }}
+        <RouterLink :to="`/category/${category.name}`" class="block p-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200">
+          {{ category.name }}
+        </RouterLink>
       </li>
     </ul>
   </div>
 </template>
 
 <style scoped>
-.category-list {
-  padding: 1rem;
-}
+/* No scoped styles needed as Tailwind CSS classes are used directly in the template */
 </style>
