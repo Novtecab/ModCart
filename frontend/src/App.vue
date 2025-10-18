@@ -44,5 +44,3 @@ import CategoryList from '@/components/CategoryList.vue'
     </footer>
   </div>
 </template>
-
-</style>
